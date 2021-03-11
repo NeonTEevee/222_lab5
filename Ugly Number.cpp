@@ -1,19 +1,21 @@
 #include <stdio.h>
 int main ()
 {
-	int num, ugly = 0, i, check;
+	int num, ugly = 0, i, check = 0;
 	scanf("%d", &num);
 	
-	for(i=1; i<check; i++)
+	for(i=1; check<num; i++)
 	{
-		if(i%2 == 0||i%3 == 0||i%5 == 0)
+		while(i%2 != 0 && i%3 != 0 && i%5 != 0 && i != 1)
 		{
-			ugly++;
-		} else {
-			while(i%2 != 0 && i%3 != 0 && i%5 != 0)
-				ugly++;
+			i++;
+			while(i%7 == 0||i%11 == 0)
+			{
+				i++;
+			}
 		}
+		ugly = i;
+		check++;
 	}
-	
 	printf("%d", ugly);
 }
