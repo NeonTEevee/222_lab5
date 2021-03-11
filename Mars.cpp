@@ -3,7 +3,8 @@
 #include <string.h>
 int main ()
 {
-	int i, j, x, y, z, wer, base, digit = 1;
+	int i, j, x, y, z, base, digit = 1;
+	unsigned long wer;
 	char tempt[100], ans[40000];
 	scanf("%d", &x);
 	scanf("%d", &y);
@@ -53,9 +54,7 @@ int main ()
 			itoa(sum[i], tempt, base);
 			strcat(ans, tempt);
 		}
-		printf("Ans = %s\n", ans);
 		wer = atoi(ans);
-		printf("Wer = %d\n", wer);
 		if(wer == z)
 		{
 			printf("%d", base);
