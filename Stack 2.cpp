@@ -3,11 +3,13 @@
 #include <string.h>
 int main ()
 {
-	int i = 0, j, terms, stack[100], num;
-	char input[100];
+	int i = 1, j, terms, num;
 	scanf("%d", &terms);
+	
+	char input[10*terms];
 	scanf(" %[^\n]", input);
 	
+	int stack[terms];
 	char *token = strtok(input, " ");
 	for(j=0; j<terms; j++) {
 		if(strcmp(token, "+") == 0)
