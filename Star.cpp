@@ -37,6 +37,7 @@ int main ()
 		} else {
 			l--;
 		}
-		printf("\n");
+		if(i>1)
+			printf("\n");
 	}
 }
