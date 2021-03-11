@@ -53,7 +53,9 @@ int main ()
 			itoa(sum[i], tempt, base);
 			strcat(ans, tempt);
 		}
+		printf("Ans = %s\n", ans);
 		wer = atoi(ans);
+		printf("Wer = %d\n", wer);
 		if(wer == z)
 		{
 			printf("%d", base);
