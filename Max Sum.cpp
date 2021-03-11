@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <math.h>
 int main ()
 {
-	int i, j, x, y, b, max = 0;
+	int i, j, x, y, count, tempt, max = 0;
 	scanf("%d", &x);
 	scanf("%d", &y);
 	
@@ -13,5 +14,11 @@ int main ()
 			scanf("%d", &a[i][j]);
 		}
 	}
+	
+	tempt = pow(x-y+1, 2);
+	int b[tempt];
+	count = x-y+1;
+	tempt = count;
+	
 	
 }
