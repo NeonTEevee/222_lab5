@@ -5,7 +5,7 @@ int main ()
 {
 	int i, j, x, y, z, base, digit = 1;
 	unsigned long wer;
-	char tempt[100], ans[40000];
+	char tempt[100], ans[40000], blank[] = "";
 	scanf("%d", &x);
 	scanf("%d", &y);
 	scanf("%d", &z);
@@ -35,6 +35,7 @@ int main ()
 	
 	for(base=2; base<=36; base++)
 	{
+		strcpy(ans, blank);
 		for(i=0; i<digit; i++)
 		{
 			sum[i] = sum[i] + m[i] + n[i];
