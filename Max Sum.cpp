@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include <math.h>
 int main ()
 {
-	int i, j, x, y, count, tempt, max = 0;
+	int i, j, x, y, n, sqr, rangeH, rangeV, max = 0;
 	scanf("%d", &x);
 	scanf("%d", &y);
 	
@@ -15,10 +14,27 @@ int main ()
 		}
 	}
 	
-	tempt = pow(x-y+1, 2);
-	int b[tempt];
-	count = x-y+1;
-	tempt = count;
-	
-	
+	int b[(x-y+1)*(x-y+1)];
+
+	sqr = 0;
+	for(n=0; n<(x-y+1)*(x-y+1); n++)
+	{
+		rangeV = 0;
+		rangeH = 0;
+		for(i=sqr; i<x; i++)
+		{
+			for(j=sqr; j<x; j++)
+			{
+				b[n]+=a[i][j];
+				rangeH++;
+				if(rangeH == x-y+1)
+					j=x;
+			}
+			rangeV++;
+			if(rangeV == x-y+1)
+				i=x;
+		}
+		sqr++;
+		printf("B[%d] = %d\n", n, b[n]);
+	}
 }
