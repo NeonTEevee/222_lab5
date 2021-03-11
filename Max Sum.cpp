@@ -29,7 +29,6 @@ int main ()
 			for(j=q; j<x; j++)
 			{
 				b[n]+=a[i][j];
-				printf("B[%d] += a[%d][%d]\n", n, i, j);
 				rangeH++;
 				if(rangeH == y)
 					j=x;
@@ -38,7 +37,6 @@ int main ()
 			if(rangeV == y)
 				i=x;
 		}
-		printf("B[%d] = %d\n", n, b[n]);
 		if(q<x-y) {
 			q++;
 		} else {
